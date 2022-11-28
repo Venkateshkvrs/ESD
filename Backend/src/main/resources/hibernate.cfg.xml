@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property
+                name="connection.url">jdbc:mysql://localhost:3306/Mini_project?createDatabaseIfNotExist=true&amp;useSSL=false</property>
+        <property name="connection.username">venky</property>
+        <property name="connection.password">1234</property>
+        <property
+                name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <!-- DB schema will be updated if needed -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="show_sql">true</property>
+        <mapping class="com.example.micro_project_esd.Bean.Department"/>
+        <mapping class="com.example.micro_project_esd.Bean.Employee"/>
+        <mapping class="com.example.micro_project_esd.Bean.Employee_Salary"/>
+    </session-factory>
+</hibernate-configuration>
